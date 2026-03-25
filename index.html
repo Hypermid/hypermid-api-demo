@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HyperMid API Playground</title>
+  <meta name="description" content="Interactive API explorer for the HyperMid Partner API. Test endpoints, view responses, and generate cURL commands.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+      <div class="logo">Hyper<span>Mid</span></div>
+      <span class="badge">API Playground</span>
+    </div>
+    <div class="header-right">
+      <div class="api-key-section">
+        <div class="api-key-indicator anonymous" id="keyIndicator">
+          <span>&#128275;</span> Anonymous
+        </div>
+        <input
+          type="password"
+          class="api-key-input"
+          id="apiKeyInput"
+          placeholder="Enter your API key..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Sidebar overlay (mobile) -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav id="endpointNav">
+        <!-- Rendered by JS -->
+      </nav>
+      <div class="sidebar-section history-section">
+        <div class="sidebar-section-title">Recent Requests</div>
+        <div id="historyList">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Panel -->
+    <main class="main-panel">
+
+      <!-- Request Builder -->
+      <div class="card" id="requestBuilder">
+        <div class="card-body">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#128640;</div>
+            <div class="empty-state-title">Select an endpoint</div>
+            <div class="empty-state-text">Choose an API endpoint from the sidebar to get started.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- cURL Panel -->
+      <div id="curlPanel"></div>
+
+      <!-- Response Panel -->
+      <div id="responsePanel">
+        <div class="card">
+          <div class="card-body">
+            <div class="empty-state">
+              <div class="empty-state-icon">&#9889;</div>
+              <div class="empty-state-title">Ready to send</div>
+              <div class="empty-state-text">Fill in the parameters and click "Send Request" to see the response here. Press <kbd style="background:var(--bg-tertiary);padding:2px 6px;border-radius:3px;border:1px solid var(--border);font-family:var(--mono);font-size:0.75rem;">Ctrl+Enter</kbd> to send quickly.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+
+</body>
+</html>
