@@ -1,6 +1,6 @@
-# HyperMid API Playground
+# Hypermid API Playground
 
-Interactive API explorer for the [HyperMid Partner API](https://api.hypermid.io). Test endpoints, view responses, and generate cURL commands — all from the browser.
+Interactive API explorer for the [Hypermid Partner API](https://api.hypermid.io). Test endpoints, view responses, and generate cURL commands — all from the browser.
 
 ## Quick Start
 
@@ -21,7 +21,7 @@ Then visit `http://localhost:3000`.
 ## Features
 
 - Dark-themed interactive API explorer
-- All HyperMid API endpoints grouped by category (Core Swap, Execute, On-Ramp, Partner, Webhooks, Health)
+- All Hypermid API endpoints grouped by category (Core Swap, Execute, On-Ramp, Partner, Webhooks, Health)
 - Auto-populated form fields for each endpoint
 - "Load Example" prefills realistic values
 - Syntax-highlighted JSON response viewer

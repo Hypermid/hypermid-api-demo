@@ -1,5 +1,5 @@
 // ============================================
-// HyperMid API Playground — Application Logic
+// Hypermid API Playground — Application Logic
 // ============================================
 
 const API_BASE = 'https://api.hypermid.io';
